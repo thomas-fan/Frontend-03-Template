@@ -49,7 +49,6 @@ ${this.bodyText}`
             }
 
             connection.on('data', (data) => {
-                console.log('data:', data.toString())
                 parser.receive(data.toString())
                 if (parser.isFinished) {
                     resolve(parser.response)
@@ -217,5 +216,6 @@ void async function() {
 
     let response = await request.send()
     let dom = parser.parseHtml(response.body)
-
+    console.log(JSON.stringify(dom, null, "    "));
+    console.log("");
 }()

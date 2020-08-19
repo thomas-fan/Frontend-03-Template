@@ -18,7 +18,9 @@ const server = http.createServer((req, res) => {
                 </style>
             </head>
             <body>
-                <div>123</div>
+                <div>
+                    <div id="myid">123</div>
+                </div>
             </body>
         </html>
     `)
